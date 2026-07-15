@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【EP3】多益600核心單字・打底特訓</title>
+    <title>【EP03】多益600核心單字・打底特訓</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -83,11 +83,11 @@
 <body>
 
 <div class="container">
-    <img src="banner.jpg" id="main-banner" alt="EP3 打底特訓" class="banner"> 
+    <img src="banner.jpg" id="main-banner" alt="EP03 打底特訓" class="banner"> 
 
     <div class="content-padding">
         <div id="intro-area" class="intro-header">
-            <h1>【EP3】基礎打底特訓</h1>
+            <h1>【EP03】基礎打底特訓</h1>
             <p>🔥 直覺 3 秒挑戰。5 題快速上手。🔥</p>
         </div>
 
@@ -139,58 +139,58 @@
 </div>
 
 <script>
-// EP3 核心資料庫：完全移除首字母提示，改為純挖空
+// EP03 核心資料庫：單字辨析僅考核單字本身含義，句型搭配採純底線無提示挖空
 const rawData = [
-    { type: "單字辨析", word: "items on <u><b>display</b></u>", show: "展示", ans: true, feedback: "display 是「展示」。" },
+    { type: "單字辨析", word: "items on <u><b>display</b></u>", show: "展示", ans: true, feedback: "display 是名詞「展示」。" },
     { type: "句型搭配", word: "display", show: "items on ______ / 填入：display", ans: true, feedback: "應填入 display。" },
-    { type: "單字辨析", word: "a qualified <u><b>candidate</b></u>", show: "設施", ans: false, feedback: "candidate 是「候選人; 申請人」。" },
-    { type: "句型搭配", word: "candidate", show: "a qualified ______ / 填入：facility", ans: false, feedback: "應填入 candidate。" },
-    { type: "單字辨析", word: "What is <u><b>stated</b></u> about the contract?", show: "陳述、說明", ans: true, feedback: "state 是「陳述、說明」。" },
+    { type: "單字辨析", word: "a qualified <u><b>candidate</b></u>", show: "顧客", ans: false, feedback: "candidate 是名詞「候選人; 申請人」。" },
+    { type: "句型搭配", word: "candidate", show: "a qualified ______ / 填入：candidate", ans: true, feedback: "應填入 candidate。" },
+    { type: "單字辨析", word: "What is <u><b>stated</b></u> about the contract?", show: "陳述、說明", ans: true, feedback: "state 是動詞「陳述、說明」。" },
     { type: "句型搭配", word: "state", show: "What is ______ about the contract? / 填入：stated", ans: true, feedback: "應填入 stated。" },
-    { type: "單字辨析", word: "a museum <u><b>exhibit</b></u>", show: "費用", ans: false, feedback: "exhibit 是「展示品」。" },
-    { type: "句型搭配", word: "exhibit", show: "a museum ______ / 填入：fee", ans: false, feedback: "應填入 exhibit。" },
-    { type: "單字辨析", word: "a brainstorming <u><b>session</b></u>", show: "一段時間; 集會", ans: true, feedback: "session 是「一段時間; 集會」。" },
+    { type: "單字辨析", word: "a museum <u><b>exhibit</b></u>", show: "紀念品", ans: false, feedback: "exhibit 是名詞「展示品」。" },
+    { type: "句型搭配", word: "exhibit", show: "a museum ______ / 填入：exhibit", ans: true, feedback: "應填入 exhibit。" },
+    { type: "單字辨析", word: "a brainstorming <u><b>session</b></u>", show: "一段時間; 集會", ans: true, feedback: "session 是名詞「一段時間; 集會」。" },
     { type: "句型搭配", word: "session", show: "a brainstorming ______ / 填入：session", ans: true, feedback: "應填入 session。" },
-    { type: "單字辨析", word: "Please <u><b>note</b></u> that the schedule may change.", show: "提交", ans: false, feedback: "note 是「注意」。" },
+    { type: "單字辨析", word: "Please <u><b>note</b></u> that the schedule may change.", show: "忽視", ans: false, feedback: "note 是動詞「注意」。" },
     { type: "句型搭配", word: "note", show: "Please ______ that the schedule may change. / 填入：note", ans: true, feedback: "應填入 note。" },
-    { type: "單字辨析", word: "<u><b>process</b></u> an order", show: "處理", ans: true, feedback: "process 是「處理」。" },
-    { type: "句型搭配", word: "process", show: "______ an order / 填入：submit", ans: false, feedback: "應填入 process。" },
-    { type: "單字辨析", word: "Please read all the <u><b>instructions</b></u>.", show: "說明(書)、指南", ans: true, feedback: "instruction 是「說明(書)、指南」。" },
-    { type: "句型搭配", word: "instruction", show: "Please read all the ______. / 填入：instructions", ans: true, feedback: "應填入 instructions。" },
-    { type: "單字辨析", word: "renew a <u><b>membership</b></u>", show: "代理處; 機關", ans: false, feedback: "membership 是「會員身分或資格」。" },
-    { type: "句型搭配", word: "membership", show: "renew a ______ / 填入：agency", ans: false, feedback: "應填入 membership。" },
-    { type: "單字辨析", word: "a local travel <u><b>agency</b></u>", show: "代理處; 機關", ans: true, feedback: "agency 是「代理處; 機關」。" },
+    { type: "單字辨析", word: "<u><b>process</b></u> an order", show: "處理", ans: true, feedback: "process 是動詞「處理」。" },
+    { type: "句型搭配", word: "process", show: "______ an order / 填入：process", ans: true, feedback: "應填入 process。" },
+    { type: "單字辨析", word: "Please read all the <u><b>instructions</b></u>.", show: "說明(書)、指南", ans: true, feedback: "instruction 是名詞「說明(書)、指南」。" },
+    { type: "句型搭配", word: "instruction", show: "Please read all the ______ . / 填入：instructions", ans: true, feedback: "應填入 instructions。" },
+    { type: "單字辨析", word: "renew a <u><b>membership</b></u>", show: "執照", ans: false, feedback: "membership 是名詞「會員身分或資格」。" },
+    { type: "句型搭配", word: "membership", show: "renew a ______ / 填入：membership", ans: true, feedback: "應填入 membership。" },
+    { type: "單字辨析", word: "a local travel <u><b>agency</b></u>", show: "代理處; 機關", ans: true, feedback: "agency 是名詞「代理處; 機關」。" },
     { type: "句型搭配", word: "agency", show: "a local travel ______ / 填入：agency", ans: true, feedback: "應填入 agency。" },
-    { type: "單字辨析", word: "a Tokyo-<u><b>based</b></u> office", show: "出色的", ans: false, feedback: "based 是「作為基地的、基礎的」。" },
+    { type: "單字辨析", word: "a Tokyo-<u><b>based</b></u> office", show: "作為基地的、基礎的", ans: true, feedback: "based 是形容詞「作為基地的、基礎的」。" },
     { type: "句型搭配", word: "based", show: "a Tokyo-______ office / 填入：based", ans: true, feedback: "應填入 based。" },
-    { type: "單字辨析", word: "a new research <u><b>facility</b></u>", show: "設施", ans: true, feedback: "facility 是「設施」。" },
-    { type: "句型搭配", word: "facility", show: "a new research ______ / 填入：industry", ans: false, feedback: "應填入 facility。" },
-    { type: "單字辨析", word: "<u><b>advance</b></u> reservation", show: "事先的", ans: true, feedback: "advance 是「事先的」。" },
+    { type: "單字辨析", word: "a new research <u><b>facility</b></u>", show: "障礙物", ans: false, feedback: "facility 是名詞「設施」。" },
+    { type: "句型搭配", word: "facility", show: "a new research ______ / 填入：facility", ans: true, feedback: "應填入 facility。" },
+    { type: "單字辨析", word: "<u><b>advance</b></u> reservation", show: "事先的", ans: true, feedback: "advance 是形容詞「事先的」。" },
     { type: "句型搭配", word: "advance", show: "______ reservation / 填入：advance", ans: true, feedback: "應填入 advance。" },
-    { type: "單字辨析", word: "join a <u><b>committee</b></u>", show: "履歷表", ans: false, feedback: "committee 是「委員會」。" },
-    { type: "句型搭配", word: "committee", show: "join a ______ / 填入：résumé", ans: false, feedback: "應填入 committee。" },
-    { type: "單字辨析", word: "The project was <u><b>successful</b></u>.", show: "成功的", ans: true, feedback: "successful 是「成功的」。" },
-    { type: "句型搭配", word: "successful", show: "The project was ______. / 填入：successful", ans: true, feedback: "應填入 successful。" },
-    { type: "單字辨析", word: "<u><b>excellent</b></u> customer service", show: "即將來臨的", ans: false, feedback: "excellent 是「出色的」。" },
-    { type: "句型搭配", word: "excellent", show: "______ customer service / 填入：upcoming", ans: false, feedback: "應填入 excellent。" },
-    { type: "單字辨析", word: "the airline <u><b>industry</b></u>", show: "產業; 業界", ans: true, feedback: "industry 是「產業; 業界」。" },
+    { type: "單字辨析", word: "join a <u><b>committee</b></u>", show: "委員會", ans: true, feedback: "committee 是名詞「委員會」。" },
+    { type: "句型搭配", word: "committee", show: "join a ______ / 填入：committee", ans: true, feedback: "應填入 committee。" },
+    { type: "單字辨析", word: "The project was <u><b>successful</b></u>.", show: "失敗的", ans: false, feedback: "successful 是形容詞「成功的」。" },
+    { type: "句型搭配", word: "successful", show: "The project was ______ . / 填入：successful", ans: true, feedback: "應填入 successful。" },
+    { type: "單字辨析", word: "<u><b>excellent</b></u> customer service", show: "出色的", ans: true, feedback: "excellent 是形容詞「出色的」。" },
+    { type: "句型搭配", word: "excellent", show: "______ customer service / 填入：excellent", ans: true, feedback: "應填入 excellent。" },
+    { type: "單字辨析", word: "the airline <u><b>industry</b></u>", show: "農業", ans: false, feedback: "industry 是名詞「產業; 業界」。" },
     { type: "句型搭配", word: "industry", show: "the airline ______ / 填入：industry", ans: true, feedback: "應填入 industry。" },
-    { type: "單字辨析", word: "pay a service <u><b>fee</b></u>", show: "高階主管", ans: false, feedback: "fee 是「費用」。" },
+    { type: "單字辨析", word: "pay a service <u><b>fee</b></u>", show: "費用", ans: true, feedback: "fee 是名詞「費用」。" },
     { type: "句型搭配", word: "fee", show: "pay a service ______ / 填入：fee", ans: true, feedback: "應填入 fee。" },
-    { type: "單字辨析", word: "<u><b>accept</b></u> an offer", show: "同意、接受", ans: true, feedback: "accept 是「同意、接受」。" },
-    { type: "句型搭配", word: "accept", show: "______ an offer / 填入：executive", ans: false, feedback: "應填入 accept。" },
-    { type: "單字辨析", word: "prepare for an <u><b>upcoming</b></u> event", show: "即將來臨的", ans: true, feedback: "upcoming 是「即將來臨的」。" },
+    { type: "單字辨析", word: "<u><b>accept</b></u> an offer", show: "拒絕", ans: false, feedback: "accept 是動詞「同意、接受」。" },
+    { type: "句型搭配", word: "accept", show: "______ an offer / 填入：accept", ans: true, feedback: "應填入 accept。" },
+    { type: "單字辨析", word: "prepare for an <u><b>upcoming</b></u> event", show: "即將來臨的", ans: true, feedback: "upcoming 是形容詞「即將來臨的」。" },
     { type: "句型搭配", word: "upcoming", show: "prepare for an ______ event / 填入：upcoming", ans: true, feedback: "應填入 upcoming。" },
-    { type: "單字辨析", word: "the <u><b>latest</b></u> company policy", show: "陳述、說明", ans: false, feedback: "latest 是「最新的」。" },
-    { type: "句型搭配", word: "latest", show: "the ______ company policy / 填入：stated", ans: false, feedback: "應填入 latest。" },
-    { type: "單字辨析", word: "<u><b>submit</b></u> a budget report", show: "提交", ans: true, feedback: "submit 是「提交」。" },
+    { type: "單字辨析", word: "the <u><b>latest</b></u> company policy", show: "過時的", ans: false, feedback: "latest 是形容詞「最新的」。" },
+    { type: "句型搭配", word: "latest", show: "the ______ company policy / 填入：latest", ans: true, feedback: "應填入 latest。" },
+    { type: "單字辨析", word: "<u><b>submit</b></u> a budget report", show: "提交", ans: true, feedback: "submit 是動詞「提交」。" },
     { type: "句型搭配", word: "submit", show: "______ a budget report / 填入：submit", ans: true, feedback: "應填入 submit。" },
-    { type: "單字辨析", word: "take public <u><b>transportation</b></u>", show: "一段時間; 集會", ans: false, feedback: "transportation 是「運輸工具」。" },
-    { type: "句型搭配", word: "transportation", show: "take public ______ / 填入：session", ans: false, feedback: "應填入 transportation。" },
-    { type: "單字辨析", word: "email a <u><b>résumé</b></u>", show: "履歷表", ans: true, feedback: "résumé 是「履歷表」。" },
+    { type: "單字辨析", word: "take public <u><b>transportation</b></u>", show: "運輸工具", ans: true, feedback: "transportation 是名詞「運輸工具」。" },
+    { type: "句型搭配", word: "transportation", show: "take public ______ / 填入：transportation", ans: true, feedback: "應填入 transportation。" },
+    { type: "單字辨析", word: "email a <u><b>résumé</b></u>", show: "包裹", ans: false, feedback: "résumé 是名詞「履歷表」。" },
     { type: "句型搭配", word: "résumé", show: "email a ______ / 填入：résumé", ans: true, feedback: "應填入 résumé。" },
-    { type: "單字辨析", word: "a senior <u><b>executive</b></u>", show: "領導階層、高階主管", ans: true, feedback: "executive 是「高階主管」。" },
-    { type: "句型搭配", word: "executive", show: "a senior ______ / 填入：exhibit", ans: false, feedback: "應填入 executive。" }
+    { type: "單字辨析", word: "a senior <u><b>executive</b></u>", show: "領導階層", ans: true, feedback: "executive 是名詞「領導階層、高階主管」。" },
+    { type: "句型搭配", word: "executive", show: "a senior ______ / 填入：executive", ans: true, feedback: "應填入 executive。" }
 ];
 
 let questions = [];
@@ -265,11 +265,10 @@ function showResult() {
     const now = new Date();
     const timeStr = `${now.getMonth() + 1}/${now.getDate()} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
 
-    // 使用獨立的 EP3 儲存欄位
-    let history = JSON.parse(localStorage.getItem('toeic_history_ep3')) || [];
+    let history = JSON.parse(localStorage.getItem('toeic_history_ep03_v1')) || [];
     history.unshift({ score: score, time: timeStr });
     if(history.length > 5) history.pop();
-    localStorage.setItem('toeic_history_ep3', JSON.stringify(history));
+    localStorage.setItem('toeic_history_ep03_v1', JSON.stringify(history));
     renderHistoryList(history);
 
     document.getElementById('review-list').innerHTML = userHistoryList.map(item => `
@@ -296,7 +295,7 @@ function renderHistoryList(history) {
 
 function confirmClear() {
     if (confirm("確定要清除所有練習紀錄嗎？")) {
-        localStorage.removeItem('toeic_history_ep3');
+        localStorage.removeItem('toeic_history_ep03_v1');
         renderHistoryList([]);
     }
 }
